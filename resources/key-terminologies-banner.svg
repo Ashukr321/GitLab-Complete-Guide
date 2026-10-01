@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" font-family="'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#171321"/>
+      <stop offset="0.55" stop-color="#2b1a5c"/>
+      <stop offset="1" stop-color="#4b1f6b"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fca326"/>
+      <stop offset="0.5" stop-color="#fc6d26"/>
+      <stop offset="1" stop-color="#e24329"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fc6d26" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#fc6d26" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="titleClip">
+      <text x="78" y="180" font-size="68" font-weight="800">Key Terminologies</text>
+    </clipPath>
+  </defs>
+
+  <style>
+    .glow  { transform-box: fill-box; transform-origin: center; animation: glow 4s ease-in-out infinite; }
+    .float { animation: float 4s ease-in-out infinite; }
+    .shine { animation: shine 6s ease-in-out infinite; }
+    .tier  { animation: tier 3s ease-in-out infinite; }
+    .edge  { stroke-dasharray: 6 6; animation: flow 1s linear infinite; }
+    .ring  { transform-box: fill-box; transform-origin: center; animation: ring 2.4s ease-out infinite; }
+    .node  { transform-box: fill-box; transform-origin: center; animation: pop 6s ease-in-out infinite; }
+    @keyframes glow  { 50% { transform: scale(1.12); opacity: 0.7; } }
+    @keyframes float { 50% { transform: translateY(-6px); } }
+    @keyframes shine { 0% { transform: translateX(0); } 60%, 100% { transform: translateX(800px); } }
+    @keyframes tier  { 0%, 40%, 100% { fill-opacity: 0.2; } 15% { fill-opacity: 0.55; } }
+    @keyframes flow  { to { stroke-dashoffset: -12; } }
+    @keyframes ring  { 0% { transform: scale(1); opacity: 0.8; } 100% { transform: scale(1.8); opacity: 0; } }
+    @keyframes pop   { 0%, 20%, 100% { transform: scale(1); } 8% { transform: scale(1.15); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+
+  <rect width="1280" height="360" fill="url(#bg)"/>
+  <rect width="1280" height="360" fill="url(#grid)"/>
+  <circle class="glow" cx="1060" cy="180" r="200" fill="url(#glow)"/>
+  <rect x="0" y="352" width="1280" height="8" fill="url(#title)"/>
+
+  <!-- left: title -->
+  <g class="float"><g transform="translate(80 70) scale(0.28)">
+    <path fill="#e24329" d="M105.0614 193.655L143.7014 74.734H66.4214z"/>
+    <path fill="#fc6d26" d="M105.0614 193.6548L66.4214 74.7338H12.2684z"/>
+    <path fill="#fca326" d="M12.2685 74.7341L.5265 110.8731c-1.071 3.296.102 6.907 2.906 8.944l101.629 73.838z"/>
+    <path fill="#e24329" d="M12.2685 74.7342h54.153L43.1465 3.1092c-1.197-3.686-6.411-3.685-7.608 0z"/>
+    <path fill="#fc6d26" d="M105.0614 193.6548l38.64-118.921h54.153z"/>
+    <path fill="#fca326" d="M197.8544 74.7341l11.742 36.139c1.071 3.296-.102 6.907-2.906 8.944l-101.629 73.838z"/>
+    <path fill="#e24329" d="M197.8544 74.7342h-54.153l23.273-71.625c1.197-3.686 6.411-3.685 7.608 0z"/>
+  </g></g>
+  <text x="152" y="100" fill="#fca326" font-size="18" font-weight="600" letter-spacing="4">GITLAB COMPLETE GUIDE</text>
+  <text x="78" y="180" fill="url(#title)" font-size="68" font-weight="800">Key Terminologies</text>
+  <g clip-path="url(#titleClip)"><rect class="shine" x="-60" y="110" width="110" height="90" fill="url(#shine)"/></g>
+  <text x="80" y="225" fill="#e5e1f0" font-size="22">The GitLab vocabulary you need, from first commit to DevSecOps</text>
+
+  <g font-size="16" font-weight="600" text-anchor="middle">
+    <rect x="80" y="258" width="130" height="38" rx="19" fill="#2da160" fill-opacity="0.2" stroke="#2da160" class="tier" style="animation-delay:0.0s"/>
+    <text x="145" y="283" fill="#ffffff">● Basic</text>
+    <rect x="222" y="258" width="170" height="38" rx="19" fill="#fca326" fill-opacity="0.2" stroke="#fca326" class="tier" style="animation-delay:0.6s"/>
+    <text x="307" y="283" fill="#ffffff">● Intermediate</text>
+    <rect x="404" y="258" width="150" height="38" rx="19" fill="#e24329" fill-opacity="0.2" stroke="#e24329" class="tier" style="animation-delay:1.2s"/>
+    <text x="479" y="283" fill="#ffffff">● Advanced</text>
+  </g>
+
+  <!-- right: mini mind map -->
+  <g class="edge" stroke="#ffffff" stroke-opacity="0.35" stroke-width="2" fill="none">
+    <path d="M1060 180 C1000 180 980 90 920 90"/>
+    <path d="M1060 180 C1000 180 980 270 920 270"/>
+    <path d="M1060 180 C1120 180 1140 90 1200 90"/>
+    <path d="M1060 180 C1120 180 1140 270 1200 270"/>
+    <path d="M1060 180 V60"/>
+    <path d="M1060 180 V300"/>
+  </g>
+  <g font-size="14" font-weight="600" text-anchor="middle" fill="#ffffff">
+    <circle class="ring" cx="1060" cy="180" r="48" fill="none" stroke="#fc6d26" stroke-width="3"/>
+    <circle cx="1060" cy="180" r="48" fill="#1f1147" stroke="url(#title)" stroke-width="4"/>
+    <text x="1060" y="186" font-size="18" font-weight="800">GitLab</text>
+    <g class="node" style="animation-delay:5s"><rect x="860" y="72" width="120" height="34" rx="17" fill="#2da160"/><text x="920" y="94">Commit</text></g>
+    <g class="node" style="animation-delay:4s"><rect x="860" y="252" width="120" height="34" rx="17" fill="#2da160"/><text x="920" y="274">Merge Request</text></g>
+    <g class="node" style="animation-delay:0s"><rect x="1000" y="30" width="120" height="34" rx="17" fill="#fca326" fill-opacity="0.9"/><text x="1060" y="52" fill="#171321">Pipeline</text></g>
+    <g class="node" style="animation-delay:3s"><rect x="1000" y="296" width="120" height="34" rx="17" fill="#fca326" fill-opacity="0.9"/><text x="1060" y="318" fill="#171321">Runner</text></g>
+    <g class="node" style="animation-delay:1s"><rect x="1140" y="72" width="120" height="34" rx="17" fill="#e24329"/><text x="1200" y="94">SAST / DAST</text></g>
+    <g class="node" style="animation-delay:2s"><rect x="1140" y="252" width="120" height="34" rx="17" fill="#e24329"/><text x="1200" y="274">GitOps</text></g>
+  </g>
+</svg>

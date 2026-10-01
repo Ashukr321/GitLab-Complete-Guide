@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" font-family="'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#171321"/>
+      <stop offset="0.55" stop-color="#2b1a5c"/>
+      <stop offset="1" stop-color="#4b1f6b"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fca326"/>
+      <stop offset="0.5" stop-color="#fc6d26"/>
+      <stop offset="1" stop-color="#e24329"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fc6d26" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#fc6d26" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+    <clipPath id="titleClip">
+      <text x="418" y="185" font-size="66" font-weight="800">GitLab Complete Guide</text>
+    </clipPath>
+  </defs>
+
+  <style>
+    .glow  { transform-box: fill-box; transform-origin: center; animation: glow 4s ease-in-out infinite; }
+    .float { animation: float 4s ease-in-out infinite; }
+    .shine { animation: shine 6s ease-in-out infinite; }
+    .chip  { animation: chip 4s ease-in-out infinite; }
+    .flow  { animation: flow 1s linear infinite; }
+    .stage { animation: stage 6s ease-out infinite; }
+    .stage.last { animation-name: deploy; }
+    .packet { animation: packet 6s linear infinite; }
+    @keyframes glow   { 50% { transform: scale(1.12); opacity: 0.7; } }
+    @keyframes float  { 50% { transform: translateY(-10px); } }
+    @keyframes shine  { 0% { transform: translateX(0); } 60%, 100% { transform: translateX(900px); } }
+    @keyframes chip   { 0%, 30%, 100% { fill-opacity: 0.08; } 12% { fill-opacity: 0.3; } }
+    @keyframes flow   { to { stroke-dashoffset: -12; } }
+    @keyframes stage  { 0% { fill: #1f1147; } 4%, 20% { fill: #2da160; } 35%, 100% { fill: #1f1147; } }
+    @keyframes deploy { 0% { fill: #1f1147; } 4%, 12% { fill: #fc6d26; } 30%, 100% { fill: #1f1147; } }
+    @keyframes packet { 0% { transform: translateX(0); opacity: 1; } 83% { transform: translateX(700px); opacity: 1; } 90%, 100% { transform: translateX(700px); opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+
+  <!-- background -->
+  <rect width="1280" height="440" fill="url(#bg)"/>
+  <rect width="1280" height="440" fill="url(#grid)"/>
+  <circle class="glow" cx="215" cy="200" r="210" fill="url(#glow)"/>
+  <rect x="0" y="432" width="1280" height="8" fill="url(#title)"/>
+
+  <!-- GitLab tanuki -->
+  <g class="float">
+    <g transform="translate(90 82) scale(1.2)">
+      <path fill="#e24329" d="M105.0614 193.655L143.7014 74.734H66.4214z"/>
+      <path fill="#fc6d26" d="M105.0614 193.6548L66.4214 74.7338H12.2684z"/>
+      <path fill="#fca326" d="M12.2685 74.7341L.5265 110.8731c-1.071 3.296.102 6.907 2.906 8.944l101.629 73.838z"/>
+      <path fill="#e24329" d="M12.2685 74.7342h54.153L43.1465 3.1092c-1.197-3.686-6.411-3.685-7.608 0z"/>
+      <path fill="#fc6d26" d="M105.0614 193.6548l38.64-118.921h54.153z"/>
+      <path fill="#fca326" d="M197.8544 74.7341l11.742 36.139c1.071 3.296-.102 6.907-2.906 8.944l-101.629 73.838z"/>
+      <path fill="#e24329" d="M197.8544 74.7342h-54.153l23.273-71.625c1.197-3.686 6.411-3.685 7.608 0z"/>
+    </g>
+  </g>
+
+  <!-- title -->
+  <text x="420" y="118" fill="#fca326" font-size="18" font-weight="600" letter-spacing="4">BEGINNER  →  ADVANCED  ·  DEVOPS HANDBOOK</text>
+  <text x="418" y="185" fill="url(#title)" font-size="66" font-weight="800">GitLab Complete Guide</text>
+  <g clip-path="url(#titleClip)">
+    <rect class="shine" x="300" y="120" width="110" height="80" fill="url(#shine)"/>
+  </g>
+  <text x="420" y="225" fill="#e5e1f0" font-size="22">Git workflows, CI/CD, Runners, DevSecOps &amp; real-world migrations</text>
+
+  <!-- topic chips -->
+  <g font-size="16" font-weight="600" fill="#ffffff" text-anchor="middle">
+    <g fill="#ffffff" fill-opacity="0.08" stroke="#fc6d26" stroke-opacity="0.7">
+      <rect class="chip" style="animation-delay:0s"   x="420" y="252" width="150" height="38" rx="19"/>
+      <rect class="chip" style="animation-delay:.25s" x="582" y="252" width="160" height="38" rx="19"/>
+      <rect class="chip" style="animation-delay:.5s"  x="754" y="252" width="165" height="38" rx="19"/>
+      <rect class="chip" style="animation-delay:.75s" x="931" y="252" width="160" height="38" rx="19"/>
+      <rect class="chip" style="animation-delay:1s"   x="420" y="302" width="125" height="38" rx="19"/>
+      <rect class="chip" style="animation-delay:1.25s" x="557" y="302" width="190" height="38" rx="19"/>
+      <rect class="chip" style="animation-delay:1.5s" x="759" y="302" width="140" height="38" rx="19"/>
+      <rect class="chip" style="animation-delay:1.75s" x="911" y="302" width="250" height="38" rx="19"/>
+    </g>
+    <text x="495" y="277">Git Workflows</text>
+    <text x="662" y="277">Merge Requests</text>
+    <text x="836.5" y="277">CI/CD Pipelines</text>
+    <text x="1011" y="277">GitLab Runners</text>
+    <text x="482.5" y="327">DevSecOps</text>
+    <text x="652" y="327">Container Registry</text>
+    <text x="829" y="327">Deployments</text>
+    <text x="1036" y="327">GitHub → GitLab Migration</text>
+  </g>
+
+  <!-- pipeline strip: a packet travels build → deploy, lighting each stage -->
+  <g font-size="14" fill="#c9c2dd" text-anchor="middle">
+    <line class="flow" x1="440" y1="385" x2="1140" y2="385" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2" stroke-dasharray="6 6"/>
+    <g fill="#1f1147" stroke-width="3">
+      <circle class="stage" style="animation-delay:0s" cx="440" cy="385" r="9" stroke="#2da160"/>
+      <circle class="stage" style="animation-delay:1s" cx="580" cy="385" r="9" stroke="#2da160"/>
+      <circle class="stage" style="animation-delay:2s" cx="720" cy="385" r="9" stroke="#2da160"/>
+      <circle class="stage" style="animation-delay:3s" cx="860" cy="385" r="9" stroke="#2da160"/>
+      <circle class="stage" style="animation-delay:4s" cx="1000" cy="385" r="9" stroke="#2da160"/>
+      <circle class="stage last" style="animation-delay:5s" cx="1140" cy="385" r="9" stroke="#fc6d26"/>
+    </g>
+    <circle class="packet" cx="440" cy="385" r="5" fill="#fca326"/>
+    <text x="440" y="415">build</text>
+    <text x="580" y="415">test</text>
+    <text x="720" y="415">sast</text>
+    <text x="860" y="415">package</text>
+    <text x="1000" y="415">review</text>
+    <text x="1140" y="415">deploy</text>
+  </g>
+</svg>

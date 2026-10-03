@@ -14,4 +14,4 @@ A complete GitLab guide covering GitLab basics to advanced concepts, including G
 | # | Topic | Covers |
 |---|---|---|
 | 1 | [Key Terminologies](KEY-TERMINOLOGIES.md) | Mind map + Basic, Intermediate & Advanced GitLab terms |
-| 🎬 | [Animated CS Concept Reel Prompt Kit](prompts/Animated-SVG-Prompt-Kit.md) ([PDF](prompts/Animated-SVG-Prompt-Kit.pdf)) | Customizable AI prompt for Instagram Reels-style (9:16) animated explainers of any CS concept |
+
